@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F8FC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- ==================== RENTPE LOGO ==================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="35dp">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/rentpe_logo"
+                android:scaleType="centerCrop"
+                android:contentDescription="RentPe Logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RentPe"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#123A8C"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+
+        <!-- ==================== LOGIN CARD ==================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/login_card"
+            android:padding="28dp">
+
+            <!-- Welcome Back -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#17191D" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in to continue your search."
+                android:textSize="18sp"
+                android:textColor="#555A66"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="30dp" />
+
+
+            <!-- ==================== EMAIL ==================== -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="17sp"
+                android:textColor="#414552"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="hello@example.com"
+                android:textSize="17sp"
+                android:textColor="#20242A"
+                android:textColorHint="#A4A8B1"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/input_background" />
+
+
+            <!-- ==================== PASSWORD ==================== -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="17sp"
+                android:textColor="#414552"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="••••••••"
+                android:textSize="17sp"
+                android:textColor="#20242A"
+                android:textColorHint="#A4A8B1"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:background="@drawable/input_background" />
+
+
+            <!-- ==================== FORGOT PASSWORD ==================== -->
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textSize="17sp"
+                android:textColor="#0758D6"
+                android:layout_marginTop="18dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+
+            <!-- ==================== LOGIN BUTTON ==================== -->
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Login  →"
+                android:textSize="19sp"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/login_button"
+                android:layout_marginTop="24dp" />
+
+
+            <!-- ==================== OR DIVIDER ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="30dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#D9DDE5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  OR  "
+                    android:textSize="18sp"
+                    android:textColor="#777C88" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#D9DDE5" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ==================== SIGN UP ==================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textSize="17sp"
+                android:textColor="#555A66" />
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="wrap_content"                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#0758D6"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
