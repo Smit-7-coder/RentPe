@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+
+        val tvSignUp = findViewById<TextView>(R.id.tvSignUp)
+
+        tvSignUp.setOnClickListener {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)
+        }
 
         // SharedPreferences
         sharedPreferences = getSharedPreferences("RentPePrefs", MODE_PRIVATE)
