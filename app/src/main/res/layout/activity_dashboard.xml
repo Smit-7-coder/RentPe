@@ -59,13 +59,7 @@
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:text="♧"
-                    android:textColor="#123A8C"
-                    android:textSize="28sp" />
+
 
             </LinearLayout>
 
@@ -301,7 +295,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="$2,400"
+                                    android:text="₹2,400"
                                     android:textColor="#073681"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
@@ -473,7 +467,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
-                        android:text="$1,200/mo"
+                        android:text="₹1,200/mo"
                         android:textColor="#073681"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -541,7 +535,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
-                        android:text="$3,100/mo"
+                        android:text="₹3,100/mo"
                         android:textColor="#073681"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -571,74 +565,159 @@
 
 
     <!-- ===================================================== -->
-    <!-- FIXED BOTTOM NAVIGATION                              -->
+    <!-- FIXED BOTTOM NAVIGATION                               -->
     <!-- ===================================================== -->
 
     <LinearLayout
         android:id="@+id/bottomNavigation"
         android:layout_width="0dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="14dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/bottom_navigation"
-        android:elevation="10dp"
+        android:elevation="12dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="6dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
+        <!-- HOME -->
+
+        <LinearLayout
+            android:id="@+id/navHome"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:background="@drawable/category_selected"
             android:gravity="center"
-            android:text="⌂\nHome"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp" />
+            android:orientation="vertical">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⌂"
+                android:textColor="#FFFFFF"
+                android:textSize="27sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- SEARCH -->
+
+        <LinearLayout
             android:id="@+id/navSearch"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="⌕\nSearch"
-            android:textColor="#555A66"
-            android:textSize="12sp" />
+            android:orientation="vertical">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⌕"
+                android:textColor="#555A66"
+                android:textSize="27sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="#555A66"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <!-- BOOKINGS -->
+
+        <LinearLayout
             android:id="@+id/navBookings"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="□\nBookings"
-            android:textColor="#555A66"
-            android:textSize="12sp" />
+            android:orientation="vertical">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="□"
+                android:textColor="#555A66"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bookings"
+                android:textColor="#555A66"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <!-- FAVORITES -->
+
+        <LinearLayout
             android:id="@+id/navFavorites"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="♡\nFavorites"
-            android:textColor="#555A66"
-            android:textSize="12sp" />
+            android:orientation="vertical">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="♡"
+                android:textColor="#555A66"
+                android:textSize="27sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites"
+                android:textColor="#555A66"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <!-- PROFILE -->
+
+        <LinearLayout
             android:id="@+id/navProfile"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="♙\nProfile"
-            android:textColor="#555A66"
-            android:textSize="12sp" />
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_person"
+                android:contentDescription="Profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#555A66"
+                android:textSize="13sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8FC">
+
+    <!-- ================================================= -->
+    <!-- SCROLLABLE CONTENT                                -->
+    <!-- ================================================= -->
+
+    <ScrollView
+        android:id="@+id/detailsScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ============================================= -->
+            <!-- PROPERTY IMAGE                                 -->
+            <!-- ============================================= -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="390dp">
+
+                <!-- ========================================= -->
+                <!-- IMAGE SLIDER                              -->
+                <!-- ========================================= -->
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/propertyImageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <!-- ========================================= -->
+                <!-- TOP DARK AREA                             -->
+                <!-- ========================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="24dp">
+
+                    <!-- BACK BUTTON -->
+
+                    <ImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_dark"
+                        android:contentDescription="Back"
+                        android:padding="13dp"
+                        android:src="@drawable/ic_arrow_back" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <!-- FAVORITE BUTTON -->
+
+                    <ImageView
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_dark"
+                        android:contentDescription="Favorite"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_favorite" />
+
+                </LinearLayout>
+
+
+                <!-- ========================================= -->
+                <!-- VERIFIED BADGE                            -->
+                <!-- ========================================= -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="88dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/verified_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:gravity="center"
+                        android:text="✓"
+                        android:textColor="#16A34A"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="VERIFIED"
+                        android:textColor="#30323A"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <!-- ========================================= -->
+                <!-- SLIDER INDICATORS                         -->
+                <!-- ========================================= -->
+
+                <LinearLayout
+                    android:id="@+id/sliderIndicators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/indicator1"
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/indicator_selected" />
+
+                    <View
+                        android:id="@+id/indicator2"
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/indicator_unselected" />
+
+                    <View
+                        android:id="@+id/indicator3"
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/indicator_unselected" />
+
+                    <View
+                        android:id="@+id/indicator4"
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/indicator_unselected" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <!-- ============================================= -->
+            <!-- MAIN PROPERTY CARD                              -->
+            <!-- ============================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-35dp"
+                android:background="@drawable/details_white_card"
+                android:orientation="vertical"
+                android:paddingStart="28dp"
+                android:paddingTop="30dp"
+                android:paddingEnd="28dp"
+                android:paddingBottom="30dp">
+
+                <!-- PROPERTY NAME -->
+
+                <TextView
+                    android:id="@+id/tvPropertyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Skyline Elite Suite"
+                    android:textColor="#073681"
+                    android:textSize="29sp"
+                    android:textStyle="bold" />
+
+                <!-- LOCATION -->
+
+                <TextView
+                    android:id="@+id/tvPropertyLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="⌖  Platinum District, New Heights"
+                    android:textColor="#7B7F8C"
+                    android:textSize="18sp" />
+
+
+                <!-- DIVIDER -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="22dp"
+                    android:background="#E3E5EA" />
+
+
+                <!-- ========================================= -->
+                <!-- RENT + DEPOSIT                             -->
+                <!-- ========================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <!-- RENT -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RENT / MONTH"
+                            android:textColor="#777B87"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvRent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="₹4,250"
+                            android:textColor="#073681"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <!-- VERTICAL DIVIDER -->
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="90dp"
+                        android:background="#E4E6EB" />
+
+
+                    <!-- DEPOSIT -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="22dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SECURITY"
+                            android:textColor="#777B87"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DEPOSIT"
+                            android:textColor="#777B87"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvDeposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="₹8,500"
+                            android:textColor="#0758D6"
+                            android:textSize="27sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- DIVIDER -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="25dp"
+                    android:background="#E3E5EA" />
+
+
+                <!-- ========================================= -->
+                <!-- DESCRIPTION                                -->
+                <!-- ========================================= -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Description"
+                    android:textColor="#20242A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Experience unparalleled luxury in this meticulously designed 3-bedroom suite. Featuring smart home automation, panoramic city views, and premium Italian finishes throughout. Located in the heart of the corporate hub with 24/7 concierge services and private elevator access. Perfect for the discerning professional who values privacy and elegance."
+                    android:textColor="#555A66"
+                    android:textSize="17sp" />
+
+
+                <!-- ========================================= -->
+                <!-- AMENITIES                                  -->
+                <!-- ========================================= -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Amenities"
+                    android:textColor="#20242A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <!-- WIFI -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/amenity_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⌁"
+                            android:textColor="#073681"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Fast&#10;WiFi"
+                            android:textColor="#555A66"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <!-- GYM -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/amenity_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚒"
+                            android:textColor="#073681"
+                            android:textSize="27sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Private&#10;Gym"
+                            android:textColor="#555A66"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <!-- VALET -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/amenity_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P"
+                            android:textColor="#073681"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Valet"
+                            android:textColor="#555A66"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ============================================= -->
+            <!-- PROPERTY OWNER                                -->
+            <!-- ============================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/details_white_card"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/profile_circle"
+                    android:clipToOutline="true"
+                    android:contentDescription="Property Owner"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_image" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eleanor Vance"
+                        android:textColor="#20242A"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Verified Property Owner"
+                        android:textColor="#7B7F8C"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <!-- MESSAGE -->
+
+                <ImageView
+                    android:id="@+id/btnMessage"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_light_blue"
+                    android:contentDescription="Message"
+                    android:padding="13dp"
+                    android:src="@drawable/ic_message"
+                    app:tint="#0758D6" />
+
+
+                <!-- CALL -->
+
+                <ImageView
+                    android:id="@+id/btnCall"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/circle_blue"
+                    android:contentDescription="Call"
+                    android:padding="13dp"
+                    android:src="@drawable/ic_phone"
+                    app:tint="#FFFFFF" />
+
+            </LinearLayout>
+
+
+            <!-- Bottom spacing -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ================================================= -->
+    <!-- FIXED BOOK VISIT BAR                              -->
+    <!-- ================================================= -->
+
+    <LinearLayout
+        android:id="@+id/bookingBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:background="#FFFFFF"
+        android:elevation="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Rent"
+                android:textColor="#7B7F8C"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvBottomRent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹4,250/mo"
+                android:textColor="#073681"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBookVisit"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/book_visit_button"
+            android:text="▣  Book Visit"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
