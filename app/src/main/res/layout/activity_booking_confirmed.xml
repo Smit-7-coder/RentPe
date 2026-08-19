@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FC"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:paddingTop="55dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="40dp">
+
+        <!-- ================= SUCCESS ICON ================= -->
+
+        <FrameLayout
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_success_outer">
+
+            <FrameLayout
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_success_circle">
+
+                <ImageView
+                    android:id="@+id/imgSuccess"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Booking successful"
+                    android:src="@drawable/ic_check"
+                    app:tint="#FFFFFF" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+
+        <!-- ================= TITLE ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Booking Confirmed!"
+            android:textColor="#062D7A"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+
+        <!-- ================= DESCRIPTION ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="Your visit to the property has been&#10;scheduled successfully."
+            android:textColor="#505560"
+            android:textSize="21sp" />
+
+
+        <!-- ================= BOOKING CARD ================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bg_confirmation_card"
+            android:elevation="3dp"
+            android:orientation="vertical">
+
+            <!-- PROPERTY INFORMATION -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="30dp">
+
+                <ImageView
+                    android:id="@+id/imgProperty"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:contentDescription="Property"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/property_one" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtPropertyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Skyline Azure Penthouse"
+                        android:textColor="#062D7A"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:contentDescription="Location"
+                            android:src="@drawable/ic_location"
+                            app:tint="#505560" />
+
+                        <TextView
+                            android:id="@+id/txtLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:text="Bandra West, Mumbai"
+                            android:textColor="#505560"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- DIVIDER -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E5E8EE" />
+
+
+            <!-- DATE AND TIME -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="30dp">
+
+                <!-- DATE ICON -->
+
+                <FrameLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/bg_icon_circle">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Date"
+                        android:src="@drawable/ic_calendar"
+                        app:tint="#0056D6" />
+
+                </FrameLayout>
+
+
+                <!-- DATE -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textColor="#505560"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Monday, Oct 24"
+                        android:textColor="#202328"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <!-- TIME -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Slot"
+                        android:textColor="#505560"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txtTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="10:30 AM"
+                        android:textColor="#202328"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- DIVIDER -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="#E5E8EE" />
+
+
+            <!-- AGENT -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="30dp">
+
+                <FrameLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/bg_icon_circle">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Agent"
+                        android:src="@drawable/ic_people"
+                        app:tint="#0056D6" />
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Property Agent"
+                        android:textColor="#505560"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txtAgent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Jonathan Sterling"
+                        android:textColor="#202328"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <!-- MESSAGE BUTTON -->
+
+                <ImageButton
+                    android:id="@+id/btnMessage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_message_button"
+                    android:contentDescription="Message Agent"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_message"
+                    app:tint="#062D7A" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ================= PRO TIP ================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/bg_tip"
+            android:orientation="horizontal"
+            android:padding="22dp">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Information"
+                android:src="@drawable/ic_info"
+                app:tint="#062D7A" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pro Tip"
+                    android:textColor="#062D7A"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Add this to your calendar to receive a reminder 1 hour before the scheduled time."
+                    android:textColor="#24458D"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ================= GO TO BOOKINGS ================= -->
+
+        <Button
+            android:id="@+id/btnMyBookings"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/bg_confirm_button"
+            android:text="▣  Go to My Bookings"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp" />
+
+
+        <!-- ================= RETURN HOME ================= -->
+
+        <Button
+            android:id="@+id/btnReturnHome"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_return_home"
+            android:text="⌂  Return Home"
+            android:textAllCaps="false"
+            android:textColor="#062D7A"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+</ScrollView>

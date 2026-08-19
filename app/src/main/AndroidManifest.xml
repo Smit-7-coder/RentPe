@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Rentpe2">
         <activity
+            android:name=".BookingConfirmedActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".BookVisitActivity"
+            android:exported="false" />
+        <activity
             android:name=".PropertyDetailsActivity"
             android:exported="false" />
         <activity
